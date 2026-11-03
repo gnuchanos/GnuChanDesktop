@@ -36,15 +36,20 @@ validates the example `.conf`. No package install is required to run these tests
 sudo ./install.sh
 ```
 
-The script installs the panel under `/usr/local/bin` and its desktop entry under
-`/usr/local/share/applications`. Launch **GnuChan Desktop** from the desktop's
-settings menu or run `gnuchan-desktop-panel`. Select a wallpaper image and style,
-then configure each connected monitor's enable state, resolution, X/Y position,
-rotation, and primary status. Apply and save commits the xrandr layout, applies
-wallpaper if selected, and persists the settings.
+The script installs the panel as both `gnuchan-desktop-panel` and
+`GnuChanDesktop` under `/usr/local/bin`; its desktop entry goes under
+`/usr/share/applications` so GnuChanRunner and the desktop menu can discover it.
+Launch **GnuChan Desktop** from the applications menu or run either command.
+Select a wallpaper image and style, then configure each connected monitor's
+enable state, resolution, X/Y position, rotation, and primary status. Apply and
+save commits the xrandr layout, applies wallpaper if selected, and persists the
+settings. The installer normalizes the installed launcher and desktop entry so
+Windows checkouts with CRLF line endings still produce runnable commands and a
+discoverable menu item.
 
-For distribution packaging, `PREFIX` and `DESTDIR` can override install paths:
-`PREFIX=/usr DESTDIR="$pkgdir" ./install.sh`.
+For distribution packaging, `PREFIX`, `APP_DIR`, and `DESTDIR` can override
+install paths: `PREFIX=/usr APP_DIR=/usr/share/applications
+DESTDIR="$pkgdir" ./install.sh`.
 
 ## Config and login startup
 

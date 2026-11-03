@@ -2,7 +2,8 @@
 Type=Application
 Name=GnuChan Desktop
 Comment=Configure wallpaper and monitor layout
-Exec=gnuchan-desktop-panel
+Exec=/usr/local/bin/GnuChanDesktop
+TryExec=/usr/local/bin/GnuChanDesktop
 Icon=preferences-desktop-display
 Terminal=false
 Categories=Settings;DesktopSettings;
@@ -11,5 +12,5 @@ Actions=ApplySaved;
 
 [Desktop Action ApplySaved]
 Name=Apply saved display settings
-Exec=gnuchan-desktop-panel --apply-saved
+Exec=/usr/local/bin/GnuChanDesktop --apply-saved
 OnlyShowIn=GNOME;KDE;XFCE;LXDE;MATE;Openbox;
