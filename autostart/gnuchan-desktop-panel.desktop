@@ -2,6 +2,6 @@
 Type=Application
 Name=GnuChan Desktop display settings
 Comment=Restore saved wallpaper and monitor layout at login
-Exec=gnuchan-desktop-panel --apply-saved
+Exec=GnuChanDesktop --apply-saved
 Terminal=false
 X-GNOME-Autostart-enabled=true

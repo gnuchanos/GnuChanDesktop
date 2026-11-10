@@ -36,10 +36,9 @@ validates the example `.conf`. No package install is required to run these tests
 sudo ./install.sh
 ```
 
-The script installs the panel as both `gnuchan-desktop-panel` and
-`GnuChanDesktop` under `/usr/local/bin`; its desktop entry goes under
+The script installs the panel as `GnuChanDesktop` under `/usr/local/bin`; its desktop entry goes under
 `/usr/share/applications` so GnuChanRunner and the desktop menu can discover it.
-Launch **GnuChan Desktop** from the applications menu or run either command.
+Launch **GnuChan Desktop** from the applications menu or run `GnuChanDesktop`.
 Select a wallpaper image and style, then configure each connected monitor's
 enable state, resolution, X/Y position, rotation, and primary status. Apply and
 save commits the xrandr layout, applies wallpaper if selected, and persists the
@@ -70,11 +69,11 @@ are validated; configuration is parsed as data only.
 To restore settings at login, copy
 `autostart/gnuchan-desktop-panel.desktop` into
 `~/.config/autostart/gnuchan-desktop-panel.desktop`. It runs
-`gnuchan-desktop-panel --apply-saved` without opening a window. The desktop entry
+`GnuChanDesktop --apply-saved` without opening a window. The desktop entry
 can also be launched directly. Config validation without applying:
 
 ```sh
-gnuchan-desktop-panel --check-config
+GnuChanDesktop --check-config
 ```
 
 ## Version
